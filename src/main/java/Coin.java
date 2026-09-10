@@ -25,10 +25,18 @@ public class Coin {
                 } else {
                     sumOfTails++;
                 }
+                // Break from outliers so program doesn't stall
+                if (sumOfHeads + sumOfTails == 10000000) {
+                    break;
+                }
             }
 
             cumulativeHeadsRatio += sumOfHeads / (sumOfHeads + sumOfTails);
             double currentMeanOfTrials = cumulativeHeadsRatio / i;
+
+            if (i % 1000 == 0) {
+                System.out.println(i + ") " + (currentMeanOfTrials*4));
+            }
         }
 
         meanOfTrials = cumulativeHeadsRatio / n;
