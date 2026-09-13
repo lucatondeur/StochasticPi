@@ -1,7 +1,7 @@
 import java.util.Random;
 
 public class Coin {
-    public char coinToss() {
+    private char coinToss() {
         Random r = new Random();
         if (r.nextBoolean()) {
             return 'h';
