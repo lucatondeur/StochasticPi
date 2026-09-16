@@ -1,9 +1,8 @@
-import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Coin {
     private char coinToss() {
-        Random r = new Random();
-        if (r.nextBoolean()) {
+        if (ThreadLocalRandom.current().nextBoolean()) {
             return 'h';
         } else {
             return 't';
