@@ -13,7 +13,7 @@ public class Coin {
         double cumulativeHeadsRatio = 0;
         double meanOfTrials = 0;
 
-        for (int i = 1; i <= n; i++) {
+        for (long i = 1; i <= n; i++) {
 
             double sumOfHeads = 0;
             double sumOfTails = 0;
